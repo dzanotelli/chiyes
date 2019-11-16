@@ -1,0 +1,13 @@
+# misc
+.idea
+\#*\#
+*~
+
+# distributing
+dist/
+build/
+*.egg*
+
+# python
+*.pyc
+__pycache__

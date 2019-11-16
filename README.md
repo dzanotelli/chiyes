@@ -1,2 +1,2 @@
 # chiyes
-Another chino.io wrapper
+Another python wrapper for chino.io API
