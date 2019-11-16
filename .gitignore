@@ -3,6 +3,11 @@
 \#*\#
 *~
 
+# distributing
+dist/
+build/
+*.egg*
+
 # python
 *.pyc
 __pycache__

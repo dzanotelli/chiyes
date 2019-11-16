@@ -5,12 +5,20 @@ A python wrapper for chino.io API
 
 """
 
+import subprocess
+
 from setuptools import setup, find_packages
 from codecs import open
 from os import path
-from chiyes import get_version
 
 here = path.abspath(path.dirname(__file__))
+
+
+def get_version():
+    proc = subprocess.run(["git", "describe"], capture_output=True)
+    if proc.returncode is 0:
+        return proc.stdout
+    return "unknown"
 
 
 # get the long description from the README file
@@ -19,7 +27,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 # read requirements.txt file
 with open(path.join(here, 'requirements.txt'), 'r') as f:
-        required_all = f.read().strip().split('\n')
+    required_all = f.read().strip().split('\n')
 
 required_dev = ['ipython', 'sphinx_rtd_theme']
 required = [item for item in required_all if item not in required_dev]
