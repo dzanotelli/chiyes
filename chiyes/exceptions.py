@@ -9,3 +9,6 @@
 
 class ConfigError(Exception):
     pass
+
+class BadHTTPMethod(Exception):
+    pass
