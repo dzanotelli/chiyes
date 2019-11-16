@@ -1,0 +1,8 @@
+# misc
+.idea
+\#*\#
+*~
+
+# python
+*.pyc
+__pycache__
