@@ -169,3 +169,11 @@ class ChinoClient:
         """
         response = self._call('get', self._base_url)
         return response.status_code == 200
+
+    @property
+    def auth(self):
+        return self._client.auth
+
+    @auth.setter
+    def auth(self, value):
+        self._client.auth = value

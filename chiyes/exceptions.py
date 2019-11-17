@@ -10,5 +10,10 @@
 class ConfigError(Exception):
     pass
 
+
 class BadHTTPMethod(Exception):
+    pass
+
+
+class MissingAuthConf(Exception):
     pass
